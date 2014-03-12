@@ -1,0 +1,41 @@
+/* === Webfont === */
+@mixin webfont {
+	@if $webfont == true {
+		.wf-active & {
+			@content;
+		}
+	}
+}
+
+/* === Breakpoints === */
+@mixin breakpoint($point) {
+	@if $point != retina {
+		@media only screen and (max-width: $point) {
+			@content;
+		}
+	}
+	@elseif $point == retina {
+		@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (-o-min-device-pixel-ratio: 5/4) {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint-min($point) {
+	@media only screen and (min-width: $point) {
+		@content;
+	}
+
+	.lt-ie9 & {
+		@content
+	}
+}
+
+/* === Clearfix === */
+%clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

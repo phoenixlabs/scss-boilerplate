@@ -1,0 +1,7 @@
+/*!
+ * SCSS Boilerplate
+ *
+ * @author: Maximilian Mayer;
+ * @copyright: 2014 by m-elf.com;
+ * @version: 1.0.0;
+ */.columns:after{content:'';display:table;clear:both}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{margin:0;padding:0;background:#fafafa;font-family:"Source Sans Pro",sans-serif;font-size:16px;line-height:150%;color:#1d2328}p{margin:0 0 25px 0}a:focus{outline:none}a:link,a:visited{-webkit-transition:0.4s;-moz-transition:0.4s;-o-transition:0.4s;transition:0.4s;color:#fd8700;text-decoration:none;font-style:italic}a:hover{color:#ca6c00;text-decoration:none}h1{margin:0;font-size:52px;line-height:120%}h2{margin:0;font-size:42px;line-height:120%}h3{margin:0;font-size:22px;line-height:120%}h4{margin:0;font-size:18px;line-height:120%}.columns .span1,.columns .span2,.columns .span3,.columns .span4,.columns .span5,.columns .span6,.columns .span7,.columns .span8,.columns .span9,.columns .span10,.columns .span11,.columns .span12{float:left;margin-left:2%}.columns .span1{width:6.5%}.columns .span2{width:15%}.columns .span3{width:23.5%}.columns .span4{width:32%}.columns .span5{width:40.5%}.columns .span6{width:49%}.columns .span7{width:57.5%}.columns .span8{width:66%}.columns .span9{width:74.5%}.columns .span10{width:83%}.columns .span11{width:91.5%}.columns .span12{width:100%}.columns>:first-child,.columns .row>:first-child{margin-left:0}.wrapper{width:92%;margin:0 auto}@media only screen and (min-width: 960px){.wrapper{width:960px}}.lt-ie9 .wrapper{width:960px}

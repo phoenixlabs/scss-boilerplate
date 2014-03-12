@@ -1,0 +1,66 @@
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: $base-background;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	color: $base-color;
+
+	@include webfont {
+		font-weight: 300;
+	}
+}
+
+p {
+	margin: 0 0 25px 0;
+}
+
+
+/* === Links === */
+a:focus {
+	outline: none;
+}
+
+a:link,
+a:visited {
+	@include transition(.4s);
+	color: $color-link;
+	text-decoration: none;
+	font-style: italic;
+}
+
+a:hover {
+	color: $color-link-hover;
+	text-decoration: none;
+}
+
+
+/* === Headlines === */
+h1 {
+	margin: 0;
+	font-size: $h1-font-size;
+	line-height: 120%;
+}
+
+h2 {
+	margin: 0;
+	font-size: $h2-font-size;
+	line-height: 120%;
+}
+
+h3 {
+	margin: 0;
+	font-size: $h3-font-size;
+	line-height: 120%;
+}
+
+h4 {
+	margin: 0;
+	font-size: $h4-font-size;
+	line-height: 120%;
+}

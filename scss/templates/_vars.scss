@@ -1,0 +1,26 @@
+$webfont: false;
+
+/* === Colors === */
+$color-dark: #1d2328;
+$color-orange: #fd8700;
+
+$color-link: $color-orange;
+$color-link-hover: darken($color-orange, 10);
+
+/* === Base === */
+$base-background: #fafafa;
+$base-font-size: 16px;
+$base-font-family: 'Source Sans Pro', sans-serif;
+$base-line-height: 150%;
+$base-color: #1d2328;
+
+/* === Headlines === */
+$h1-font-size: 52px;
+$h2-font-size: 42px;
+$h3-font-size: 22px;
+$h4-font-size: 18px;
+
+/* === Breakpoints === */
+$large: 960px;
+$middle: 640px;
+$small: 320px;

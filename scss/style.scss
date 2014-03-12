@@ -1,0 +1,27 @@
+/*!
+ * SCSS Boilerplate
+ *
+ * @author: Maximilian Mayer;
+ * @copyright: 2014 by m-elf.com;
+ * @version: 1.0.0;
+ */
+
+
+/* === Include Dependencies === */
+@import "compass";
+@import "rgbapng";
+
+
+/* === Include SCSS Files === */
+@import "templates/vars";
+
+@import "assets/mixins";
+@import "assets/reset";
+@import "assets/grid";
+
+// @import "assets/modules/typo3";
+// @import "assets/modules/wordpress";
+
+@import "templates/partials/header";
+@import "templates/partials/footer";
+@import "templates/main";

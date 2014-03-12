@@ -1,0 +1,8 @@
+.wrapper {
+	width: 92%;
+	margin: 0 auto;
+
+	@include breakpoint-min($large) {
+		width: 960px;
+	}
+}

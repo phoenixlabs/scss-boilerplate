@@ -1,0 +1,43 @@
+$cols: 12;
+$gutter: 2%;
+
+$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
+
+@mixin cols($num) {
+	width: ($one_col * $num) + ($gutter * ($num - 1));
+}
+
+@mixin sub_cols($num_child, $num_parent) {
+	$parent_size: ($one_col * $num_parent) + ($gutter * ($num_parent - 1));
+	$child_size: ($one_col * $num_child) + ($gutter * ($num_child - 1));
+	margin-left: ($gutter / $parent_size) * 100%;
+	width: ($child_size / $parent_size) * 100%;
+}
+
+// build grid
+.columns {
+	@extend %clearfix;
+
+	#{enumerate('.span', 1, $cols, '')} {
+		float: left;
+		margin-left: $gutter;
+	}
+
+	@for $i from 1 through $cols {
+		.span#{$i} {
+			@include cols($i);
+
+			// // nested grid
+			// @for $j from 1 through ($i - 1) {
+			// 	.span#{$j} {
+			// 		@include sub_cols($j, $i);
+			// 	}
+			// }
+		}
+	}
+
+	> :first-child,
+	.row > :first-child {
+		margin-left: 0;
+	}
+}

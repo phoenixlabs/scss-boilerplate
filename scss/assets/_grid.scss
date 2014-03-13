@@ -19,13 +19,27 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 	@extend %clearfix;
 
 	#{enumerate('.span', 1, $cols, '')} {
-		float: left;
-		margin-left: $gutter;
+		@include breakpoint-min($middle) {
+			float: left;
+			margin-left: $gutter;
+		}
+
+		@include breakpoint($middle) {
+			margin-bottom: $gutter;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	@for $i from 1 through $cols {
 		.span#{$i} {
-			@include cols($i);
+			width: 100%;
+
+			@include breakpoint-min($middle) {
+				@include cols($i);
+			}
 
 			// // nested grid
 			// @for $j from 1 through ($i - 1) {
@@ -36,8 +50,7 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 		}
 	}
 
-	> :first-child,
-	.row > :first-child {
+	> :first-child {
 		margin-left: 0;
 	}
 }

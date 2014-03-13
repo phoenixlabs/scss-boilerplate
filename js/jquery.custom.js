@@ -5,7 +5,11 @@ WebFont.load({
 });
 
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
+
+	if ($("html").hasClass("lt-ie9")) {
+		$(".columns div:first-child").css( "margin-left", "0" );
+	}
 
 	// your code here
 

@@ -22,6 +22,10 @@ p {
 
 
 /* === Links === */
+a img {
+	border: 0;
+}
+
 a:focus {
 	outline: none;
 }

@@ -1,0 +1,21 @@
+/* === Clearfix === */
+%clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+/* === List-Reset === */
+%list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* === Gap-Reset === */
+%gap-reset {
+	margin: 0;
+	padding: 0;
+}

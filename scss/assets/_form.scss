@@ -1,0 +1,57 @@
+form {
+	max-width: 600px;
+	margin: 60px auto;
+
+	.row {
+		@extend %clearfix;
+		margin: 0 0 5px 0;
+	}
+
+	input, textarea {
+		@include transition(.4s);
+		@include border-radius(3px);
+		width: 100%;
+		padding: 4px 10px;
+		border: 1px solid #ccc;
+		outline: none;
+		font-family: $base-font-family;
+		font-size: $base-font-size;
+		color: $base-color;
+
+		@include breakpoint-min($small) {
+			width: 70%;
+			float: right;
+		}
+
+		&:focus {
+			border-color: $form-border-color-focus;
+			@include box-shadow(0 0 2px $form-border-color-focus);
+		}
+	}
+
+	label {
+		width: 100%;
+
+		@include breakpoint-min($small) {
+			width: 28%;
+			padding: 5px 0;
+			display: inline-block;
+		}
+	}
+
+	input[type="submit"] {
+		background: $form-submit-color;
+		border-color: $form-submit-color;
+		color: #fff;
+		cursor: pointer;
+
+		&:hover {
+			background: $form-submit-color-hover;
+			border-color: $form-submit-color-hover;
+		}
+	}
+
+	textarea {
+		min-height: 100px;
+	}
+}

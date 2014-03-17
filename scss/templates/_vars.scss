@@ -23,4 +23,9 @@ $h4-font-size: 18px;
 /* === Breakpoints === */
 $large: 960px;
 $middle: 640px;
-$small: 320px;
+$small: 480px;
+
+/* === Form === */
+$form-border-color-focus: $color-orange;
+$form-submit-color: $color-orange;
+$form-submit-color-hover: #444;

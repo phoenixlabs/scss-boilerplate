@@ -1,5 +1,5 @@
 # SCSS Boilerplate
-build for compuart.com from Maximilian Mayer - <maximilian.mayer@compuart.com>.
+build from compuart.com from [Maximilian Mayer](http://twitter.com/maximilianmayer/) and [Rene Kreupl](http://www.renekreupl.de/)
 
 ## Install the grunt dependencies
 	npm install grunt

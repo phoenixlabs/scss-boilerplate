@@ -1,18 +1,2 @@
 @import "typo3/tx_form";
-
-/* === Powermail === */
-.tx-powermail {
-	fieldset {
-		@extend %gap-reset;
-		border: 0;
-
-		> legend {
-			display: none;
-		}
-	}
-
-	.powermail_fieldwrap {
-		@extend %clearfix;
-		margin: 0 0 5px 0;
-	}
-}
+@import "typo3/tx_powermail";

@@ -1,0 +1,27 @@
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+.gallery {
+	margin: auto;
+}
+.gallery-item {
+	float: left;
+	margin-top: 10px;
+	text-align: center;
+	width: 33%;
+}
+.gallery img {
+	border: 2px solid #cfcfcf;
+}
+.gallery-caption {
+	margin-left: 0;
+}
+.gallery-thumb {float: left; margin-right: 10px;}
+.post {
+	@extend %clearfix;
+	margin: 0 0 15px 0;
+}

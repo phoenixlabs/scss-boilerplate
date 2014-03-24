@@ -1,0 +1,23 @@
+$tags: p, td, th, div, headings(), address;
+
+%align-left {
+	text-align: left;
+}
+%align-center {
+	text-align: center;
+}
+%align-right {
+	text-align: right;
+}
+%align-justify {
+	text-align: justify;
+}
+
+@each $tag in $tags {
+	#{$tag} {
+		&.align-left { @extend %align-left;}
+		&.align-center { @extend %align-center;}
+		&.align-right { @extend %align-right;}
+		&.align-justify { @extend %align-justify}
+	}
+}

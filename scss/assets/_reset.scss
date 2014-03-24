@@ -35,7 +35,6 @@ a:visited {
 	@include transition(.4s);
 	color: $color-link;
 	text-decoration: none;
-	font-style: italic;
 }
 
 a:hover {

@@ -20,6 +20,16 @@ $h2-font-size: 42px;
 $h3-font-size: 22px;
 $h4-font-size: 18px;
 
+$h1-font-family: $base-font-family;
+$h2-font-family: $base-font-family;
+$h3-font-family: $base-font-family;
+$h4-font-family: $base-font-family;
+
+$h1-color: $color-dark;
+$h2-color: $color-dark;
+$h3-color: $color-dark;
+$h4-color: $color-dark;
+
 /* === Breakpoints === */
 $large: 960px;
 $middle: 640px;

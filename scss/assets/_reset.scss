@@ -46,24 +46,32 @@ a:hover {
 /* === Headlines === */
 h1 {
 	margin: 0;
+	font-family: $h1-font-family;
 	font-size: $h1-font-size;
 	line-height: 120%;
+	color: $h1-color;
 }
 
 h2 {
 	margin: 0;
+	font-family: $h2-font-family;
 	font-size: $h2-font-size;
 	line-height: 120%;
+	color: $h2-color;
 }
 
 h3 {
 	margin: 0;
+	font-family: $h3-font-family;
 	font-size: $h3-font-size;
 	line-height: 120%;
+	color: $h3-color;
 }
 
 h4 {
 	margin: 0;
+	font-family: $h4-font-family;
 	font-size: $h4-font-size;
 	line-height: 120%;
+	color: $h4-color;
 }

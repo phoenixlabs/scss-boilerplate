@@ -42,6 +42,10 @@ a:hover {
 	text-decoration: none;
 }
 
+a[href$='.pdf'] {
+	background: url("../images/icons/pdficon_small.png") no-repeat;
+	padding: 0 0 0 22px;
+}
 
 /* === Headlines === */
 h1 {

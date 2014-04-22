@@ -46,10 +46,15 @@ a[href$='.pdf'] {
 	padding: 0 0 0 22px;
 }
 
-/* === Images & iFrames === */
-img, iframe {
+/* === Images === */
+img {
 	max-width: 100%;
 	height: auto;
+}
+
+/* === iFrames === */
+iframe {
+	max-width: 100%;
 }
 
 /* === Headlines === */

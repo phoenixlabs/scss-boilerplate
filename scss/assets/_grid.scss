@@ -1,16 +1,16 @@
-$cols: 12;
-$gutter: 2%;
+$grid-cols: 12;
+$grid-gutter: 2%;
 
-$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
+$one_col: (100% - ($grid-gutter * ($grid-cols - 1))) / $grid-cols;
 
-@mixin cols($num) {
-	width: ($one_col * $num) + ($gutter * ($num - 1));
+@mixin grid-cols($num) {
+	width: ($one_col * $num) + ($grid-gutter * ($num - 1));
 }
 
-@mixin sub_cols($num_child, $num_parent) {
-	$parent_size: ($one_col * $num_parent) + ($gutter * ($num_parent - 1));
-	$child_size: ($one_col * $num_child) + ($gutter * ($num_child - 1));
-	margin-left: ($gutter / $parent_size) * 100%;
+@mixin sub_grid-cols($num_child, $num_parent) {
+	$parent_size: ($one_col * $num_parent) + ($grid-gutter * ($num_parent - 1));
+	$child_size: ($one_col * $num_child) + ($grid-gutter * ($num_child - 1));
+	margin-left: ($grid-gutter / $parent_size) * 100%;
 	width: ($child_size / $parent_size) * 100%;
 }
 
@@ -18,14 +18,14 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 .columns {
 	@extend %clearfix;
 
-	#{enumerate('.span', 1, $cols, '')} {
+	#{enumerate('.span', 1, $grid-cols, '')} {
 		@include breakpoint-min($middle) {
 			float: left;
-			margin-left: $gutter;
+			margin-left: $grid-gutter;
 		}
 
 		@include breakpoint($middle) {
-			margin-bottom: $gutter;
+			margin-bottom: $grid-gutter;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -33,18 +33,18 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 		}
 	}
 
-	@for $i from 1 through $cols {
+	@for $i from 1 through $grid-cols {
 		.span#{$i} {
 			width: 100%;
 
 			@include breakpoint-min($middle) {
-				@include cols($i);
+				@include grid-cols($i);
 			}
 
 			// // nested grid
 			// @for $j from 1 through ($i - 1) {
 			// 	.span#{$j} {
-			// 		@include sub_cols($j, $i);
+			// 		@include sub_grid-cols($j, $i);
 			// 	}
 			// }
 		}

@@ -11,10 +11,17 @@ $color-brand2: $color-dark;
 $color-link: $color-brand1;
 $color-link-hover: darken($color-brand1, 10);
 
+/* === Fonts === */
+$font-sourcesans: 'Source Sans Pro', sans-serif;
+$font-arial: 'Arial', sans-serif;
+
+$font-brand1: $font-sourcesans;
+$font-brand2: $font-arial;
+
 /* === Base === */
 $base-background: #fafafa;
 $base-font-size: 16px;
-$base-font-family: 'Source Sans Pro', sans-serif;
+$base-font-family: $font-sourcesans;
 $base-line-height: 150%;
 $base-color: $color-brand2;
 

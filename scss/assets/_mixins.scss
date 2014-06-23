@@ -7,6 +7,14 @@
 	}
 }
 
+/* === REM === */
+@mixin rem($value, $base: $base-font-size) {
+	@if $support-legacy {
+		font-size: $value;
+	}
+	font-size: $value / $base * 1rem;
+}
+
 /* === Breakpoints === */
 @mixin breakpoint($point) {
 	@if $point != retina {

@@ -5,15 +5,18 @@ $support-legacy: true;
 $color-dark: #1d2328;
 $color-orange: #fd8700;
 
-$color-link: $color-orange;
-$color-link-hover: darken($color-orange, 10);
+$color-brand1: $color-orange;
+$color-brand2: $color-dark;
+
+$color-link: $color-brand1;
+$color-link-hover: darken($color-brand1, 10);
 
 /* === Base === */
 $base-background: #fafafa;
 $base-font-size: 16px;
 $base-font-family: 'Source Sans Pro', sans-serif;
 $base-line-height: 150%;
-$base-color: #1d2328;
+$base-color: $color-brand2;
 
 /* === Headlines === */
 $h1-font-size: 52px;
@@ -26,10 +29,10 @@ $h2-font-family: $base-font-family;
 $h3-font-family: $base-font-family;
 $h4-font-family: $base-font-family;
 
-$h1-color: $color-dark;
-$h2-color: $color-dark;
-$h3-color: $color-dark;
-$h4-color: $color-dark;
+$h1-color: $color-brand2;
+$h2-color: $color-brand2;
+$h3-color: $color-brand2;
+$h4-color: $color-brand2;
 
 /* === Breakpoints === */
 $large: 960px;
@@ -37,8 +40,8 @@ $middle: 640px;
 $small: 480px;
 
 /* === Form === */
-$form-border-color-focus: $color-orange;
-$form-submit-color: $color-orange;
+$form-border-color-focus: $color-brand1;
+$form-submit-color: $color-brand1;
 $form-submit-color-hover: #444;
 
 /* === Grid === */

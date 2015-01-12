@@ -1,56 +1,38 @@
 $grid-cols: 12 !default;
-$grid-gutter: 2% !default;
+$grid-gutter: 3% !default;
+$grid-breakpoint: 480px !default;
 
 $one_col: (100% - ($grid-gutter * ($grid-cols - 1))) / $grid-cols;
 
 @mixin grid-cols($num) {
-	width: ($one_col * $num) + ($grid-gutter * ($num - 1));
+    width: ($one_col * $num) + ($grid-gutter * ($num - 1));
 }
 
-@mixin sub_grid-cols($num_child, $num_parent) {
-	$parent_size: ($one_col * $num_parent) + ($grid-gutter * ($num_parent - 1));
-	$child_size: ($one_col * $num_child) + ($grid-gutter * ($num_child - 1));
-	margin-left: ($grid-gutter / $parent_size) * 100%;
-	width: ($child_size / $parent_size) * 100%;
-}
-
-// build grid
+// build grid output
 .columns {
-	@extend %clearfix;
+    @extend %clearfix;
 
-	#{enumerate('.span', 1, $grid-cols, '')} {
-		@include breakpoint-min($middle) {
-			float: left;
-			margin-left: $grid-gutter;
-		}
+    @for $i from 1 through $grid-cols {
+        .span#{$i} {
+            width: 100%;
+            margin: 0 0 $grid-gutter 0;
 
-		@include breakpoint($middle) {
-			margin-bottom: $grid-gutter;
+            @include breakpoint-min($grid-breakpoint) {
+                @include grid-cols($i);
+                margin: 0 0 0 $grid-gutter;
+                float: left;
 
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+                &:first-child,
+                &.first-child {
+                    margin: 0;
+                }
+            }
 
-	@for $i from 1 through $grid-cols {
-		.span#{$i} {
-			width: 100%;
-
-			@include breakpoint-min($middle) {
-				@include grid-cols($i);
-			}
-
-			// // nested grid
-			// @for $j from 1 through ($i - 1) {
-			// 	.span#{$j} {
-			// 		@include sub_grid-cols($j, $i);
-			// 	}
-			// }
-		}
-	}
-
-	> :first-child {
-		margin-left: 0;
-	}
+            @include breakpoint($grid-breakpoint) {
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }

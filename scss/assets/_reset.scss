@@ -1,5 +1,5 @@
 * {
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 }
 
 body {
@@ -31,7 +31,7 @@ a:focus {
 
 a:link,
 a:visited {
-	@include transition(.4s);
+	transition: 0.4s;
 	color: $color-link;
 	text-decoration: none;
 }

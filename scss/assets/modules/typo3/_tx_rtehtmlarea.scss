@@ -1,5 +1,3 @@
-$tags: p, td, th, div, headings(), address;
-
 %align-left {
 	text-align: left;
 }
@@ -13,11 +11,7 @@ $tags: p, td, th, div, headings(), address;
 	text-align: justify;
 }
 
-@each $tag in $tags {
-	#{$tag} {
-		&.align-left { @extend %align-left;}
-		&.align-center { @extend %align-center;}
-		&.align-right { @extend %align-right;}
-		&.align-justify { @extend %align-justify}
-	}
-}
+.align-left { @extend %align-left;}
+.align-center { @extend %align-center;}
+.align-right { @extend %align-right;}
+.align-justify { @extend %align-justify}

@@ -7,7 +7,20 @@ var gulp         = require('gulp'),
 	order        = require('gulp-order'),
 	watch        = require('gulp-watch'),
 	livereload   = require('gulp-livereload'),
-	notify       = require('gulp-notify');
+	notify       = require('gulp-notify')
+	install      = require("gulp-install");
+
+
+gulp.task('runBower', function() {
+	gulp.src('./bower.json')
+		.pipe(install());
+});
+
+
+gulp.task('copyBowerFiles', function() {
+	gulp.src(['./bower_components/jquery/jquery.min.js', './bower_components/modernizr/modernizr.js', './bower_components/bower-webfontloader/webfont.js'])
+		.pipe(gulp.dest('dist/js/vendor'));
+});
 
 
 gulp.task('sass', function() {
@@ -30,11 +43,6 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('vendor', function() {
-	gulp.src('src/js/vendor/*')
-		.pipe(gulp.dest('dist/js/vendor'));
-});
-
 
 gulp.task('watch', function() {
 	livereload.listen();
@@ -45,4 +53,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('build', ['sass', 'js', 'vendor']);
+gulp.task('build', ['runBower', 'sass', 'js']);

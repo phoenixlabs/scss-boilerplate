@@ -6,6 +6,4 @@ build from [Maximilian Mayer](http://twitter.com/maximilianmayer/) and [Rene Kre
 	npm install
 
 ## Getting Started
-- Change "name" & "version" in "package.json"
-- Run "gulp build" if you want compile the project files
-- Run "gulp watch" in your console for gulp-watch task
+	gulp build && gulp copyBowerFiles

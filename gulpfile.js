@@ -16,13 +16,6 @@ gulp.task('runBower', function() {
 		.pipe(install());
 });
 
-
-gulp.task('copyBowerFiles', function() {
-	gulp.src(['./bower_components/jquery/jquery.min.js', './bower_components/modernizr/modernizr.js', './bower_components/bower-webfontloader/webfont.js'])
-		.pipe(gulp.dest('dist/js/vendor'));
-});
-
-
 gulp.task('sass', function() {
 	gulp.src('src/scss/*.scss')
 		.pipe(sass({

@@ -1,9 +1,10 @@
 {
   "name": "scss-boilerplate",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "dependencies": {
-    "jquery": "1.9.0",
-    "modernizr": "~2.7.2",
+    "jquery": "latest",
+    "modernizr": "latest",
+    "fontawesome": "latest",
     "bower-webfontloader": ""
   }
 }

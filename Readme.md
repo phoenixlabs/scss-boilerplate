@@ -6,5 +6,6 @@ build from [Maximilian Mayer](http://twitter.com/maximilianmayer/) and [Rene Kre
 	npm install
 
 ## Getting Started
-	gulp watch
 	gulp build
+
+	gulp watch

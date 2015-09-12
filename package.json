@@ -14,5 +14,8 @@
     "gulp-sass": "~1.1.0",
     "gulp-uglify": "~1.0.1",
     "gulp-watch": "~1.1.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
   }
 }

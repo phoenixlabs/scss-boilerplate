@@ -11,10 +11,10 @@ var gulp         = require('gulp'),
 	install      = require("gulp-install");
 
 
-gulp.task('runBower', function() {
-	gulp.src('./bower.json')
-		.pipe(install());
-});
+//gulp.task('runBower', function() {
+//	gulp.src('./bower.json')
+//		.pipe(install());
+//});
 
 gulp.task('sass', function() {
 	gulp.src('src/scss/*.scss')
@@ -46,4 +46,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('build', ['runBower', 'sass', 'js']);
+gulp.task('build', ['sass', 'js']);

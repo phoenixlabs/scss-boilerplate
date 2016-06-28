@@ -1,3 +1,5 @@
+# deprecated
+
 # SCSS Boilerplate 1.1.0
 build from [Maximilian Mayer](http://twitter.com/maximilianmayer/) and [Rene Kreupl](http://www.renekreupl.de/)
 
